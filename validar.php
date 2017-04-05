@@ -6,7 +6,7 @@
 			$usuario = $_POST['usuario'];
 			$password = $_POST['password'];
 			$log = mysql_query("SELECT * FROM usuario WHERE nombUsuario='$usuario'"); //pass blob
-            
+            //AES_DECRYPT(pass,nombUsuario)
 			if (mysql_num_rows($log)>0) {
 				$row = mysql_fetch_array($log);
 				$_SESSION["usuario"] = $row['nombUsuario'];
