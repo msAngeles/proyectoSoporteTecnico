@@ -18,29 +18,29 @@
 <body>
     <div class="container">
 
-        <form class="form-signin">
+        <form class="form-signin" method="post" action="insertarUsuario.php">
             <h2 class="form-signin-heading">Porfavor ingresa tus datos</h2>
-            <label for="inputUsuario" class="sr-only">usuario</label>
-            <input type="text" id="inputUsuario" class="form-control" placeholder="Usuario" required autofocus>
+            <label for="" class="sr-only">usuario</label>
+            <input name=" inputUsuario" type="text" id="inputUsuario" class="form-control" placeholder="Usuario" required autofocus>
           
             <label for="inputNombre" class="sr-only">Nombre(s)</label>
-            <input type="text" id="inputNombre" class="form-control" placeholder="Nombre" required autofocus>
+            <input name="inputNombre" type="text" id="inputNombre" class="form-control" placeholder="Nombre" required autofocus>
           
             <label for="inputApp" class="sr-only">Apellido paterno</label>
-            <input type="text" id="inputApp" class="form-control" placeholder="Apellido paterno" required autofocus>
+            <input name="inputApp" type="text" id="inputApp" class="form-control" placeholder="Apellido paterno" required autofocus>
           
             <label for="inputApm" class="sr-only">Apellido materno</label>
-            <input type="text" id="inputApm" class="form-control" placeholder="Apellido materno" required autofocus>
+            <input name="inputApm" type="text" id="inputApm" class="form-control" placeholder="Apellido materno" required autofocus>
           
             
             <label for="inputEmail" class="sr-only">Email</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <input name="inputEmail" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
             
             <label for="inputpass" class="sr-only">password</label>
-            <input type="password" id="inputpass" class="form-control" placeholder="Password" required autofocus>
+            <input name=" inputpass" type="password" id="inputpass" class="form-control" placeholder="Password" required autofocus>
             
             <label for="inputrepass" class="sr-only">password</label>
-            <input type="password" id="inputrepass" class="form-control" placeholder="Repetir password" required autofocus>
+            <input name=" inputrepass" type="password" id="inputrepass" class="form-control" placeholder="Repetir password" required autofocus>
             
             
             
