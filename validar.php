@@ -10,8 +10,8 @@
 			if (mysql_num_rows($log)>0) {
 				$row = mysql_fetch_array($log);
                 $_SESSION["usuario"] = $row['nombUsuario'];
-				//echo '<script> window.location="panel.php"; </script>';
-                echo $row['AES_DECRYPT(pass,nombUsuario)'];
+				echo '<script> window.location="panel.php"; </script>';
+                //echo $row['AES_DECRYPT(pass,nombUsuario)'];
                 
 			}
 			else{
