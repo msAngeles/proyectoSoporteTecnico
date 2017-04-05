@@ -1,3 +1,12 @@
+<?php
+    SESSION_START();
+    include 'conexion.php';
+    if(ISSET($_SESSION['usuario'])) {
+        echo '<script> window.location="panel.php"; </script>';
+    }
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -11,23 +20,21 @@
     <title>Login</title>
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/signin.css" rel="stylesheet">
-
-
 </head>
 
 <body>
     <div class="container">
 
-        <form class="form-signin">
+        <form class="form-signin" method="POST" action="validar.php" >
             <center><h2 class="form-signin-heading">LOGIN</h2></center>
 
             <label for="inputUsuario" class="sr-only">usuario</label>
-            <input type="text" id="inputUsuario" class="form-control" placeholder="Usuario" required autofocus>
+            <input type="text" name="usuario" id="inputUsuario" class="form-control" placeholder="Usuario" required autofocus>
                       
             <label for="inputpass" class="sr-only">password</label>
-            <input type="password" id="inputpass" class="form-control" placeholder="Password" required autofocus>
+            <input type="password" name="password" id="inputpass" class="form-control" placeholder="Password" required autofocus>
                         
-            <button class="btn btn-lg btn-primary btn-block boton" type="submit" style="">Entrar</button>
+            <button type="submit" name="btn_login" class="btn btn-lg btn-primary btn-block boton" style="">Entrar</button>
 
             <a href="recuperar_pass.php">Recuperar Password</a>
         </form>
