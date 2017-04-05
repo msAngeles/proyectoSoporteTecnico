@@ -1,5 +1,5 @@
 <?php
-//Insertando una linea para resolver	
+
 	$host="localhost";
 	$user="root";
 	$pass="";
@@ -8,4 +8,6 @@
 	mysql_connect("$host","$user","$pass") or die("No es posible conectarse a la BD");
 	//conectandose a la bd
 	mysql_select_db("$bd") or die ("La bd no existe");
+
 ?>
+
