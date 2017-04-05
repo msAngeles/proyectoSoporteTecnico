@@ -1,5 +1,6 @@
 <?php
-	$host="localhost";
+//Insertando una linea	
+$host="localhost";
 	$user="root";
 	$pass="";
 	$bd="ti2";
