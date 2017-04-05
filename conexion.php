@@ -1,6 +1,6 @@
 <?php
-//Insertando una linea	
-$host="localhost";
+//Insertando una linea para resolver	
+	$host="localhost";
 	$user="root";
 	$pass="";
 	$bd="ti2";
