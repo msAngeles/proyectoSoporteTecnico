@@ -77,26 +77,26 @@
                         echo ('<div class="form‐group">');
                             echo ('<label for="nombre" 
                             style="position:relative;width:226px; margin: 0px 0px;">Nombre : </label>');
-                            echo ('<input type="text" class="form‐control" id="nombre" value="'.$fila_recorre['nombre'].'" style="position: absolute;width:320px; margin: 0px 0px;" readonly>');
+                            echo ('<input type="text" class="form‐control" id="nombre" value="'.$fila_recorre['nombre'].'" style="position: absolute;width:320px; margin: 0px 0px;" readonly name="nombre">');
                         
                             echo ('<label for="app" 
                             style="position:relative;width:226px; margin: 0px 0px;">Apellido paterno : </label>');
-                            echo ('<input type="text" class="form‐control" id="app" value="'.$fila_recorre['app'].'" style="position: absolute;width:320px; margin: 0px 0px;" readonly>');
+                            echo ('<input type="text" class="form‐control" id="app" value="'.$fila_recorre['app'].'" style="position: absolute;width:320px; margin: 0px 0px;" readonly name="app">');
                             
                             echo ('<label for="apm" 
                             style="position:relative;width:226px; margin: 0px 0px;">Apellido materno : </label>');
-                            echo ('<input type="text" class="form‐control" id="apm" value="'.$fila_recorre['apm'].'" style="position: absolute;width:320px; margin: 0px 0px;" readonly>');
+                            echo ('<input type="text" class="form‐control" id="apm" value="'.$fila_recorre['apm'].'" style="position: absolute;width:320px; margin: 0px 0px;" readonly name="apm">');
                         
                             echo ('<label for="telf" 
                             style="position:relative;width:226px; margin: 0px 0px;">Telefono : </label>');
-                            echo ('<input type="text" class="form‐control" id="telf" value="'.$fila_recorre['telf'].'" style="position: absolute;width:320px; margin: 0px 0px;" readonly>');
+                            echo ('<input type="text" class="form‐control" id="telf" value="'.$fila_recorre['telf'].'" style="position: absolute;width:320px; margin: 0px 0px;" readonly name="telf">');
                         
     
                             echo ('<label for="email" 
                             style="position:relative;width:226px; margin: 0px 0px;">Email : </label>');
-                            echo ('<input type="text" class="form‐control" id="email" value="'.$fila_recorre['email'].'" style="position: absolute;width:320px; margin: 0px 0px;" readonly>');
+                            echo ('<input type="text" class="form‐control" id="email" value="'.$fila_recorre['email'].'" style="position: absolute;width:320px; margin: 0px 0px;" readonly name="email">');
                         
-    
+                            
                        
                             
                         echo ('</div>');

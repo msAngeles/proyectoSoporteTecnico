@@ -1,18 +1,19 @@
 <?php
 
-$var_inputUsuario=$_POST['inputUsuario'];
-$var_inputNombre=$_POST['inputNombre'];
-$var_inputApp=$_POST['inputApp'];
-$var_inputApm=$_POST['inputApm'];
-$var_inputEmail=$_POST['inputEmail'];
+$nombre=$_POST['nombre'];
+$app=$_POST['app'];
+$apm=$_POST['apm'];
+$telf=$_POST['telf'];
+$email=$_POST['email'];
 
 //conexion a la BD
 	include("conexion.php");
-	$query="UPDATE usuario SET nombre='$var_inputUsuario',app='$var_inputNombre',apm='$var_inputApp',email='$var_inputApm',telf='$var_inputEmail' WHERE nombUsuario='miriam'";
+	$query="UPDATE usuario SET nombre='$nombre',app='$app',apm='$apm',email='$telf',telf='$email' WHERE nombUsuario='miriam'";
 	
 	mysql_query($query);
 	
-	echo '<script> window.location="login.php"; </script>';
+	echo '<script>alert("Usuario modificado");
+ window.location="editarPerfil.php"; </script>';
 	
 	mysql_close();
 		

@@ -55,21 +55,51 @@
 
 
         <div class="container-fluid">
-            
-<?php while($fila_recorre=mysql_fetch_array($fila))	{
-    
-            echo ('<div class="row col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">');
-    
-    
-    
-                echo ('<div class="col-xs-4 col-sm-3 sidebar">');
-                    echo ('<img src="data:image/jpeg;base64,'.base64_encode($fila_recorre['foto'] ).'" class="img‐rounded col-sm-13 col-md-13" alt="Cinque Terre" width="304" height="236">');
+
+
+            <div class="row col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2">
+
+
+                <div class="col-xs-6 col-sm-3 col-md-4  sidebar">
+
+                    <form name="form1" action="" method="post"  enctype="multipart/form-data">
+                        <input type="file" name="f1" class="btn btn-lg btn-primary btn-block container" style="position:absolute; margin:185px 0px; width: 200px; height: 50px;">
+                        <input class="btn btn-lg btn-primary btn-block container" type="submit" name="submit1" value="Guardar imagen" style="position:absolute; margin:250px 0px; width: 305px; height: 50px;">
+
+                    </form>
+
+                    <?php
+mysql_connect("localhost","root","");
+mysql_select_db("ti2");
+if(isset($_POST["submit1"]))
+{
+$image = addslashes(file_get_contents($_FILES['f1']['tmp_name']));
+mysql_query("UPDATE `usuario` SET  foto='$image'");    
+    //UPDATE `usuario` SET nombre="mairim" WHERE nombUsuario="miriam"
+}
+   $res=mysql_query("select foto from usuario where nombUsuario='miriam'");
+   
+   while($row=mysql_fetch_array($res))
+   {
+   echo '<img src="data:image/jpeg;base64,'.base64_encode($row['foto'] ).'" class="img‐rounded col-sm-13 col-md-13" alt="Cinque Terre" width="304" height="236">';
+  
+   }
+?>
+                </div>
+
+
+                <!--<div class="col-xs-4 col-sm-3 sidebar">
+                    <img src="data:image/jpeg;base64,'.base64_encode($fila_recorre['foto'] ).'" class="img‐rounded col-sm-13 col-md-13" alt="Cinque Terre" width="304" height="236">
                     
-                echo ('</div>');
+                </div>-->
 
-            echo ('</div>');
+            </div>
 
-            echo ('<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">');
+            <?php while($fila_recorre=mysql_fetch_array($fila))	{
+ 
+            
+            
+            echo ('<div class="col-sm-9 col-sm-offset-3 col-md-10">');
 
 
                 echo ('<div class="row placeholders">');
@@ -80,25 +110,24 @@
                         echo ('<div class="form‐group">');
                             echo ('<label for="nombre" 
                             style="position:relative;width:226px; margin: 0px 0px;">Nombre : </label>');
-                            echo ('<input type="text" class="form‐control" id="nombre" value="'.$fila_recorre['nombre'].'" style="position: absolute;width:320px; margin: 0px 0px;" >');
+                            echo ('<input type="text" class="form‐control" id="nombre" value="'.$fila_recorre['nombre'].'" style="position: absolute;width:320px; margin: 0px 0px;" name="nombre" maxlength="30" pattern="[a-zA-Z a-zA-Z]*" title="solo puedes introducir letras">');
                         
                             echo ('<label for="app" 
                             style="position:relative;width:226px; margin: 0px 0px;">Apellido paterno : </label>');
-                            echo ('<input type="text" class="form‐control" id="app" value="'.$fila_recorre['app'].'" style="position: absolute;width:320px; margin: 0px 0px;" >');
+                            echo ('<input type="text" class="form‐control" id="app" value="'.$fila_recorre['app'].'" style="position: absolute;width:320px; margin: 0px 0px;" name="app" maxlength="30" pattern="[a-zA-Z a-zA-Z]*" title="solo puedes introducir letras">');
                             
                             echo ('<label for="apm" 
                             style="position:relative;width:226px; margin: 0px 0px;">Apellido materno : </label>');
-                            echo ('<input type="text" class="form‐control" id="apm" value="'.$fila_recorre['apm'].'" style="position: absolute;width:320px; margin: 0px 0px;" >');
+                            echo ('<input type="text" class="form‐control" id="apm" value="'.$fila_recorre['apm'].'" style="position: absolute;width:320px; margin: 0px 0px;" name="apm" maxlength="30" pattern="[a-zA-Z a-zA-Z]*" title="solo puedes introducir letras">');
                         
                             echo ('<label for="telf" 
                             style="position:relative;width:226px; margin: 0px 0px;">Telefono : </label>');
-                            echo ('<input type="text" class="form‐control" id="telf" value="'.$fila_recorre['telf'].'" style="position: absolute;width:320px; margin: 0px 0px;" >');
+                            echo ('<input type="text" class="form‐control" id="telf" value="'.$fila_recorre['telf'].'" style="position: absolute;width:320px; margin: 0px 0px;"  name="telf" pattern="[0-9]+{10}" title="solo puedes introducir numeros"  maxlength="10">');
                         
     
                             echo ('<label for="email" 
                             style="position:relative;width:226px; margin: 0px 0px;">Email : </label>');
-                            echo ('<input type="text" class="form‐control" id="email" value="'.$fila_recorre['email'].'" style="position: absolute;width:320px; margin: 0px 0px;" >');
-                        
+                            echo ('<input type="text" class="form‐control" id="email" value="'.$fila_recorre['email'].'" style="position: absolute;width:320px; margin: 0px 0px;" name="email" maxlength="50" title="micuenta@ejemplo.com">');
                             
                         echo ('</div>');
 
@@ -111,10 +140,10 @@
                 
             echo ('</div>');
            }
-?> 
-            
-            
-            
+?>
+
+
+
         </div>
 
 
@@ -132,7 +161,7 @@
     </body>
 
     </html>
-<!--<form class="form‐inline formu">
+    <!--<form class="form‐inline formu">
             <div class="form‐group">
                 <label for="exampleInputName2">Name</label>
                 <input type="text" class="form‐control" id="exampleInputName2" placeholder="Jane Doe">
