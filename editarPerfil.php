@@ -5,6 +5,7 @@
     $nombreSesion=$_SESSION['usuario'];
 ?>
 
+
     <?php
 
 	include("conexion.php");
@@ -90,7 +91,7 @@ $image = addslashes(file_get_contents($_FILES['f1']['tmp_name']));
 mysql_query("UPDATE `usuario` SET  foto='$image' where nombUsuario='$nombreSesion'");    
     //UPDATE `usuario` SET nombre="mairim" WHERE nombUsuario="miriam"
 }
-   $res=mysql_query("select foto from usuario where nombUsuario='miriam'");
+   $res=mysql_query("select * from usuario where nombUsuario='$nombreSesion'");
    
    while($row=mysql_fetch_array($res))
    {

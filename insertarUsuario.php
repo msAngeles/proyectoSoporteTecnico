@@ -12,7 +12,10 @@ $var_telf=$_POST['telf'];
 
 	//conexion a la BD
 	include("conexion.php");
-	$query="INSERT INTO usuario(idUsuario, nombUsuario, nombre, app, apm, pass, email,telf) VALUES (null,'$var_inputUsuario','$var_inputNombre','$var_inputApp','$var_inputApm',AES_ENCRYPT('$var_inputpass','$var_inputUsuario'),'$var_inputEmail','$var_telf')";
+
+    $image = addslashes(file_get_contents("img/user.jpg"));
+
+	$query="INSERT INTO usuario(idUsuario, nombUsuario, nombre, app, apm, pass, email,telf,foto) VALUES (null,'$var_inputUsuario','$var_inputNombre','$var_inputApp','$var_inputApm',AES_ENCRYPT('$var_inputpass','$var_inputUsuario'),'$var_inputEmail','$var_telf','$image')";
 	
 	mysql_query($query);
 	

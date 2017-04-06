@@ -49,10 +49,10 @@
             <input name="telf" type="text" id="telf" class="form-control" placeholder="telfefono" required autofocus pattern="[0-9]+{10}" title="solo puedes introducir numeros"  maxlength="10">
             
             <label for="inputpass" class="sr-only">password</label>
-            <input name=" inputpass" type="password" id="inputpass" class="form-control" placeholder="Password" required autofocus maxlength="16">
+            <input name="inputpass" type="password" id="inputpass" class="form-control" placeholder="Password" required autofocus maxlength="16">
             
             <label for="inputrepass" class="sr-only">password</label>
-            <input name=" inputrepass" type="password" id="inputrepass" class="form-control" placeholder="Repetir password" required autofocus maxlength="16">
+            <input name="inputrepass" type="password" id="inputrepass" class="form-control" placeholder="Repetir password" required autofocus maxlength="16">
             
             
             
@@ -65,6 +65,7 @@
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    
 </body>
 
 </html>
