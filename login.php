@@ -2,7 +2,7 @@
     SESSION_START();
     include 'conexion.php';
     if(ISSET($_SESSION['usuario'])) {
-        echo '<script> window.location="panel.php"; </script>';
+        echo '<script> window.location="index.php"; </script>';
     }
 ?>
 
@@ -36,7 +36,8 @@
                         
             <button type="submit" name="btn_login" class="btn btn-lg btn-primary btn-block boton" style="">Entrar</button>
 
-            <a href="recuperar_pass.php">Recuperar Password</a>
+            <a href="recuperar_pass.php">Recuperar Password</a><br>
+            <a href="registro.php">Crear cuenta</a>
         </form>
 
     </div>
