@@ -1,0 +1,25 @@
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+width: 56px;
+}
+
+
+@media screen and (max-width : 500px) {
+   input{
+    margin:80px 120px ;
+    font-size: 23px;
+    width: 190px;
+    }
+    
+    
+}
+
+
+
+
+

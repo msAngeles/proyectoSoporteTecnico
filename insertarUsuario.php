@@ -6,12 +6,13 @@ $var_inputApp=$_POST['inputApp'];
 $var_inputApm=$_POST['inputApm'];
 $var_inputEmail=$_POST['inputEmail'];
 $var_inputpass=$_POST['inputpass'];
+$var_telf=$_POST['telf'];
 
 	
 
 	//conexion a la BD
 	include("conexion.php");
-	$query="INSERT INTO usuario(idUsuario, nombUsuario, nombre, app, apm, pass, email, tipoUsuario, estado) VALUES (null,'$var_inputUsuario','$var_inputNombre','$var_inputApp','$var_inputApm',AES_ENCRYPT('$var_inputpass','$var_inputUsuario'),'$var_inputEmail','u','0')";
+	$query="INSERT INTO usuario(idUsuario, nombUsuario, nombre, app, apm, pass, email,telf) VALUES (null,'$var_inputUsuario','$var_inputNombre','$var_inputApp','$var_inputApm',AES_ENCRYPT('$var_inputpass','$var_inputUsuario'),'$var_inputEmail','$var_telf')";
 	
 	mysql_query($query);
 	

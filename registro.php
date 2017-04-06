@@ -36,6 +36,9 @@
             <label for="inputEmail" class="sr-only">Email</label>
             <input name="inputEmail" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
             
+            <label for="telf" class="sr-only">Telefono</label>
+            <input name="telf" type="text" id="telf" class="form-control" placeholder="telfefono" required autofocus>
+            
             <label for="inputpass" class="sr-only">password</label>
             <input name=" inputpass" type="password" id="inputpass" class="form-control" placeholder="Password" required autofocus>
             
