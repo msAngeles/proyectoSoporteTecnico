@@ -2,7 +2,7 @@
     SESSION_START();
     include 'conexion.php';
     if(ISSET($_SESSION['usuario'])) {
-        echo '<script> window.location="panel.php"; </script>';
+        echo '<script> window.location="index.php"; </script>';
     }
 ?>
 

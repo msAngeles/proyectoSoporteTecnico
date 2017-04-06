@@ -1,3 +1,12 @@
+<?php
+  session_start();
+  include 'conexion.php';
+
+  if(isset($_SESSION['usuario'])) {
+    $nombre=$_SESSION['usuario'];
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -33,9 +42,18 @@
           <a class="navbar-brand" href="index.php">Home</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
+         
+            <ul class="nav navbar-nav navbar-right">
             <li><a href="perfil.php">Mi Perfil</a></li>
+            <li><a href="logout.php">Salir</a></li>
             <li><a href="#">Ayuda</a></li>
+          </ul>
+            
+             <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Altas</a></li>
+            <li><a href="#">Bajas</a></li>
+            <li><a href="#">Consulta</a></li>
+            
           </ul>
           
         </div>
@@ -54,3 +72,9 @@
     
   </body>
 </html>
+
+<?php
+  }else{
+	 echo '<script> window.location="login.php"; </script>';
+  }
+?>

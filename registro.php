@@ -1,3 +1,12 @@
+<?php
+    SESSION_START();
+    include 'conexion.php';
+    if(ISSET($_SESSION['usuario'])) {
+        echo '<script> window.location="index.php"; </script>';
+    }
+?>
+
+
 <!DOCTYPE html>
 <html>
 
